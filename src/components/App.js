@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import config from '../config';
 
 //custom components
 import Header from './Header';
@@ -42,7 +43,7 @@ class App extends Component {
           {states.status !== 0 && 
             <div>
               <button className="btn-back btn btn-primary btn-xs" onClick={this.onNavigate.bind(this,0)}>back</button>
-              <TimeWatcher/>
+              <TimeWatcher API={config.TIME_API}/>
             </div>
           }
           
